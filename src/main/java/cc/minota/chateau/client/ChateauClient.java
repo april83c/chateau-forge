@@ -120,6 +120,10 @@ public final class ChateauClient {
 
         if (!shouldSendToChat) {
             event.setCanceled(true);
+        } else if (hasExclamation) {
+            // The ! is a prefix for us, not something to say out loud. An empty result
+            // (the message was just "!") is dropped by Forge before it reaches the server.
+            event.setMessage(actualMessage);
         }
     }
 
