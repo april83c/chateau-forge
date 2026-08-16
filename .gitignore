@@ -1,5 +1,12 @@
 # Project exclude paths
 /.gradle/
 /build/
-/build/classes/kotlin/client/
-/build/classes/kotlin/main/
+/run/
+
+# ForgeGradle / IDE run outputs
+/runs/
+/logs/
+*.launch
+/bin/
+/eclipse/
+/out/
